@@ -1,0 +1,129 @@
+{
+  "projects": [
+    {
+      "slug": "countries-world",
+      "type": "app",
+      "title": "Страны мира",
+      "tagline": "Справочник по 190 странам и викторина по флагам",
+      "description": "Флаги, гербы, столицы, валюты, карты и гимны. Интерфейс на русском, английском и испанском.",
+      "platform": "Android",
+      "icon": "assets/projects/countries-world/icon.png",
+      "screenshots": [
+        {
+          "src": "assets/projects/countries-world/1.webp",
+          "width": 480,
+          "height": 853,
+          "alt": "Экран викторины: вопрос по флагу и четыре варианта ответа"
+        },
+        {
+          "src": "assets/projects/countries-world/2.webp",
+          "width": 480,
+          "height": 853,
+          "alt": "Список стран с флагами и столицами"
+        },
+        {
+          "src": "assets/projects/countries-world/3.webp",
+          "width": 480,
+          "height": 853,
+          "alt": "Страница страны с гимном и пластинкой"
+        },
+        {
+          "src": "assets/projects/countries-world/4.webp",
+          "width": 480,
+          "height": 853,
+          "alt": "Поиск страны по названию и столице"
+        }
+      ],
+      "links": [
+        {
+          "label": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=ru.dencherk.countryworld"
+        },
+        {
+          "label": "RuStore",
+          "url": "https://www.rustore.ru/catalog/app/ru.dencherk.countryworld"
+        }
+      ]
+    },
+    {
+      "slug": "traveler-passport",
+      "type": "app",
+      "title": "Паспорт путешественника",
+      "tagline": "Штампы в паспорт и ежедневный челлендж",
+      "description": "Угадайте страну по флагу, контуру или столице, собирайте штампы и закрывайте страницы паспорта. 195 стран, ежедневный челлендж и режим выживания.",
+      "platform": "Android",
+      "icon": "assets/projects/traveler-passport/icon.png",
+      "screenshots": [
+        {
+          "src": "assets/projects/traveler-passport/1.webp",
+          "width": 480,
+          "height": 853,
+          "alt": "Паспорт с коллекцией штампов по странам"
+        },
+        {
+          "src": "assets/projects/traveler-passport/2.webp",
+          "width": 480,
+          "height": 853,
+          "alt": "Главный экран с ежедневным челленджем"
+        },
+        {
+          "src": "assets/projects/traveler-passport/3.webp",
+          "width": 480,
+          "height": 853,
+          "alt": "Вопрос викторины с флагом Японии"
+        },
+        {
+          "src": "assets/projects/traveler-passport/4.webp",
+          "width": 480,
+          "height": 853,
+          "alt": "Вопрос викторины с контуром страны"
+        },
+        {
+          "src": "assets/projects/traveler-passport/5.webp",
+          "width": 480,
+          "height": 853,
+          "alt": "Итог раунда: 4 из 10 и новая страна"
+        },
+        {
+          "src": "assets/projects/traveler-passport/6.webp",
+          "width": 480,
+          "height": 853,
+          "alt": "Статистика точности по регионам"
+        }
+      ],
+      "links": [
+        {
+          "label": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=ru.dencherk.passport"
+        },
+        {
+          "label": "RuStore",
+          "url": "https://www.rustore.ru/catalog/app/ru.dencherk.passport"
+        }
+      ]
+    },
+    {
+      "slug": "professor-apelsinkin",
+      "type": "site",
+      "title": "Профессор Апельсинкин",
+      "tagline": "Сайт семейного центра в ЖК Бутово Парк",
+      "description": "Программы для детей от 3 лет, расписание, педагоги и запись на пробное занятие. Центр находится в ЖК Бутово Парк.",
+      "platform": "Сайт",
+      "icon": "assets/projects/professor-apelsinkin/icon.png",
+      "screenshots": [
+        {
+          "src": "assets/projects/professor-apelsinkin/1.webp",
+          "width": 1200,
+          "height": 750,
+          "alt": "Главная страница сайта: заголовок и программы центра"
+        }
+      ],
+      "links": [
+        {
+          "label": "Открыть сайт",
+          "url": "https://professor-apelsinkin.ru/"
+        }
+      ]
+    }
+  ]
+}

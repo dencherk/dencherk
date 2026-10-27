@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Страница не найдена — Dencherk</title>
+    <meta name="description" content="Такой страницы нет. Вернитесь на главную." />
+    <meta name="author" content="Dencherk" />
+    <meta name="theme-color" content="#181818" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="robots" content="noindex" />
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
+
+    <link
+      rel="preload"
+      href="assets/fonts/manrope-cyrillic-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/manrope-latin-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/icons.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body data-page="notfound">
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header
+      id="site-header"
+      class="fixed inset-x-0 top-4 z-50 flex justify-center px-4"
+    ></header>
+    <main id="main" class="min-h-screen" tabindex="-1">
+      <noscript>
+        <div class="container-page py-24">
+          <p class="text-lg text-muted">Страница не найдена. Вернитесь на главную.</p>
+        </div>
+      </noscript>
+    </main>
+    <div id="menu-root"></div>
+    <footer id="site-footer" class="border-t border-line"></footer>
+  </body>
+</html>
