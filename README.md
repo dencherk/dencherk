@@ -5,18 +5,20 @@
 ## Структура
 
 ```
-index.html            главная
-privacy.html          политика конфиденциальности
-404.html              страница ошибки
+index.html            главная (готовая HTML-разметка)
+privacy.html          политика конфиденциальности (готовая HTML-разметка)
+404.html              страница ошибки (готовая HTML-разметка)
 CNAME                 домен для GitHub Pages (dencherk.ru)
 data/site.json        все тексты, контакты и адрес сайта
 data/projects.json    проекты: приложения, сайты, игры
 css/styles.css        собранный Tailwind (коммитится)
-js/app.js             рендер страницы и анимации
+js/app.js             гидрация, меню и анимации
+js/render.js          общие HTML-шаблоны для браузера и prerender
 js/icons.js           иконки Phosphor
 src/input.css         исходник стилей
 tailwind.config.js    палитра, шрифт, ширина текста
 assets/               шрифты, иконки, экраны, OG, favicon
+tools/prerender.mjs   статическая сборка HTML из data/*.json
 tools/seo.mjs         canonical, sitemap и robots из site.json
 ```
 
@@ -48,26 +50,38 @@ tools/seo.mjs         canonical, sitemap и robots из site.json
 }
 ```
 
-Карточка появится сама. Запись с `type: "game"` уберёт пустое состояние из раздела «Игры». Поля с `TODO` и записи с `"hidden": true` не выводятся.
+Карточка появится сама после `npm run build`: HTML пересобирается из JSON, вручную править `index.html` не нужно. Запись с `type: "game"` уберёт пустое состояние из раздела «Игры». Поля с `TODO` и записи с `"hidden": true` не выводятся.
+
+## После правки JSON
+
+`index.html`, `privacy.html` и `404.html` содержат готовый HTML, а не пустой каркас. Он собирается из `data/site.json` и `data/projects.json`:
+
+```bash
+npm run build
+```
+
+Шаг `build:prerender` записывает шапку, меню, контент, подвал и JSON-LD прямо в HTML. После любой правки JSON запускайте `npm run build` и коммитьте пересобранные файлы (`index.html`, `privacy.html`, `404.html`, `css/styles.css`, `sitemap.xml`, `robots.txt`).
+
+Без JavaScript страница читается: контент уже в HTML. С включённым JavaScript `js/app.js` не перерисовывает разметку, а только включает меню, подсветку навигации, reveal и tagline. Класс `no-js` на `<html>` заменяется на `js` маленьким inline-скриптом в `<head>`.
 
 ## Адрес сайта
 
 `SITE_URL` хранится в `data/site.json` в поле `url` (сейчас `https://dencherk.ru`). После смены домена выполните:
 
 ```bash
-npm run build:seo
+npm run build
 ```
 
-Скрипт обновит `canonical`, `og:url`, `og:image`, `sitemap.xml` и `robots.txt`. Файл `CNAME` уже содержит `dencherk.ru`; при смене домена обновите его вручную.
+Сборка обновит `canonical`, `og:url`, `og:image`, JSON-LD, `sitemap.xml` и `robots.txt`. Файл `CNAME` уже содержит `dencherk.ru`; при смене домена обновите его вручную.
 
-## Сборка стилей
+## Сборка
 
 ```bash
 npm install
-npm run build:css
+npm run build
 ```
 
-`css/styles.css` уже собран и лежит в репозитории. Пересобирайте его после правок классов или `src/input.css`.
+`npm run build` выполняет три шага: собирает `css/styles.css`, пересобирает HTML через `tools/prerender.mjs` и обновляет SEO-файлы. `css/styles.css` и готовые HTML лежат в репозитории, поэтому результат сборки нужно коммитить. После правок классов или `src/input.css` тоже запускайте `npm run build`.
 
 ## Локальный просмотр
 
@@ -77,7 +91,7 @@ npm run build:css
 python -m http.server 8080
 ```
 
-Затем откройте `http://localhost:8080`.
+Затем откройте `http://localhost:8080`. Встроенный сервер Python не отдаёт `404.html` на неизвестные адреса; для проверки 404 на вложенных путях нужен GitHub Pages или сервер с fallback на `404.html`.
 
 ## Публикация
 

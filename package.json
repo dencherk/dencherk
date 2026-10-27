@@ -4,8 +4,9 @@
   "private": true,
   "description": "Статический сайт разработчика для GitHub Pages",
   "scripts": {
-    "build": "npm run build:css && npm run build:seo",
+    "build": "npm run build:css && npm run build:prerender && npm run build:seo",
     "build:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --minify",
+    "build:prerender": "node ./tools/prerender.mjs",
     "build:seo": "node ./tools/seo.mjs",
     "watch:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --watch",
     "serve": "python -m http.server 8080"

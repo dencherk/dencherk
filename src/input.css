@@ -132,6 +132,39 @@
     @apply bg-surface-2 text-paper;
   }
 
+  .nav-links {
+    display: none;
+  }
+
+  @media (min-width: 640px) {
+    .nav-links {
+      display: flex;
+    }
+  }
+
+  .no-js .nav-capsule {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .no-js .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .no-js .nav-toggle {
+    display: none;
+  }
+
+  @media (max-width: 639px) {
+    .no-js .nav-brand,
+    .no-js .nav-link {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+
   .nav-brand:active,
   .nav-link:active {
     transform: scale(0.98);
@@ -246,61 +279,61 @@
     transition: opacity 300ms var(--ease), visibility 0s;
   }
 
-  .mobile-link {
+  .js .mobile-link {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 500ms var(--ease), transform 500ms var(--ease);
   }
 
-  .mobile-menu.is-open .mobile-link {
+  .js .mobile-menu.is-open .mobile-link {
     opacity: 1;
     transform: none;
     transition-delay: var(--d, 0ms);
   }
 
-  .mobile-menu.is-open .mobile-link:active {
+  .js .mobile-menu.is-open .mobile-link:active {
     transform: scale(0.98);
   }
 
-  .hero-in {
+  .js .hero-in {
     transform: translateY(16px);
     transition: transform 600ms var(--ease);
     transition-delay: var(--d, 0ms);
   }
 
-  body.is-ready .hero-in {
+  .js body.is-ready .hero-in {
     transform: none;
   }
 
-  .reveal {
+  .js .reveal {
     opacity: 0;
     transform: translateY(32px);
     transition: opacity 700ms var(--ease), transform 700ms var(--ease);
   }
 
-  .reveal.is-revealed {
+  .js .reveal.is-revealed {
     opacity: 1;
     transform: none;
   }
 
-  .card-reveal {
+  .js .card-reveal {
     opacity: 0;
     transform: translateY(16px);
     transition: opacity 600ms var(--ease), transform 600ms var(--ease);
     transition-delay: calc(var(--i, 0) * 85ms + 100ms);
   }
 
-  .reveal.is-revealed .card-reveal {
+  .js .reveal.is-revealed .card-reveal {
     opacity: 1;
     transform: none;
   }
 
-  .tagline-word {
+  .js .tagline-word {
     opacity: 0.3;
     transition: opacity 300ms var(--ease);
   }
 
-  .tagline-word.is-lit {
+  .js .tagline-word.is-lit {
     opacity: 1;
   }
 }
@@ -325,7 +358,7 @@
   }
 
   .mobile-link {
-    opacity: 1;
-    transform: none;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base href="/" />
+    <script>
+      document.documentElement.classList.replace('no-js', 'js');
+    </script>
     <title>Страница не найдена — Dencherk</title>
     <meta name="description" content="Такой страницы нет. Вернитесь на главную." />
     <meta name="author" content="Dencherk" />
@@ -30,6 +34,7 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/icons.js" defer></script>
+    <script src="js/render.js" defer></script>
     <script src="js/app.js" defer></script>
   </head>
   <body data-page="notfound">
@@ -37,15 +42,23 @@
     <header
       id="site-header"
       class="fixed inset-x-0 top-4 z-50 flex justify-center px-4"
-    ></header>
-    <main id="main" class="min-h-screen" tabindex="-1">
-      <noscript>
-        <div class="container-page py-24">
-          <p class="text-lg text-muted">Страница не найдена. Вернитесь на главную.</p>
-        </div>
-      </noscript>
+    >
+      <!-- prerender:header:start -->
+<nav class="nav-capsule" aria-label="Основная навигация"><a class="nav-brand" href="index.html">Dencherk</a><a class="nav-link" href="index.html">На главную</a></nav>
+<!-- prerender:header:end -->
+    </header>
+    <main id="main" class="min-h-screen" tabindex="-1" data-prerendered>
+      <!-- prerender:main:start -->
+<section class="pb-24 pt-24"><div class="container-page"><div class="max-w-content"><p class="eyebrow">Ошибка 404</p><p class="mt-6 text-7xl font-semibold text-line" aria-hidden="true">404</p><h1 class="mt-4 text-4xl font-semibold sm:text-5xl">Страница не найдена</h1><p class="mt-4 text-lg text-muted">Возможно, ссылка устарела или в адресе ошибка.</p><a class="btn btn-primary mt-8" href="index.html">На главную<svg class="h-5 w-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a></div></div></section>
+<!-- prerender:main:end -->
     </main>
-    <div id="menu-root"></div>
-    <footer id="site-footer" class="border-t border-line"></footer>
+    <div id="menu-root"><!-- prerender:menu:start -->
+<div id="mobile-menu" class="mobile-menu sm:hidden" role="dialog" aria-modal="true" aria-label="Меню" aria-hidden="true" inert><nav class="flex h-full flex-col justify-center px-6" aria-label="Меню"><a class="mobile-link flex items-baseline gap-4 py-3 text-3xl font-semibold text-paper hover:text-paper" href="#projects" style="--d:0ms" data-menu-link data-nav-mobile="projects"><span class="text-sm font-semibold text-muted" aria-hidden="true">01</span>Проекты</a><a class="mobile-link flex items-baseline gap-4 py-3 text-3xl font-semibold text-paper hover:text-paper" href="#about" style="--d:60ms" data-menu-link data-nav-mobile="about"><span class="text-sm font-semibold text-muted" aria-hidden="true">02</span>Обо мне</a><a class="mobile-link flex items-baseline gap-4 py-3 text-3xl font-semibold text-paper hover:text-paper" href="#contacts" style="--d:120ms" data-menu-link data-nav-mobile="contacts"><span class="text-sm font-semibold text-muted" aria-hidden="true">03</span>Контакты</a></nav></div>
+<!-- prerender:menu:end --></div>
+    <footer id="site-footer" class="border-t border-line">
+      <!-- prerender:footer:start -->
+<div class="container-page flex flex-col gap-6 py-12 sm:flex-row sm:items-center sm:justify-between"><div class="flex items-center gap-3"><img class="h-8 w-8 rounded-lg" src="assets/favicon/favicon-32.png" width="32" height="32" alt="" loading="lazy" decoding="async"><div><p class="text-sm font-semibold">Dencherk</p><p class="text-xs text-muted">© 2026. Все права защищены.</p></div></div><div class="flex flex-wrap items-center gap-6 text-sm"><a class="footer-link" href="index.html">На главную</a></div></div>
+<!-- prerender:footer:end -->
+    </footer>
   </body>
 </html>

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      document.documentElement.classList.replace('no-js', 'js');
+    </script>
     <title>Политика конфиденциальности — Dencherk</title>
     <meta
       name="description"
@@ -56,6 +59,7 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/icons.js" defer></script>
+    <script src="js/render.js" defer></script>
     <script src="js/app.js" defer></script>
   </head>
   <body data-page="privacy">
@@ -63,15 +67,26 @@
     <header
       id="site-header"
       class="fixed inset-x-0 top-4 z-50 flex justify-center px-4"
-    ></header>
-    <main id="main" class="min-h-screen" tabindex="-1">
-      <noscript>
-        <div class="container-page py-24">
-          <p class="text-lg text-muted">Для отображения страницы включите JavaScript.</p>
-        </div>
-      </noscript>
+    >
+      <!-- prerender:header:start -->
+<nav class="nav-capsule" aria-label="Основная навигация"><a class="nav-brand" href="index.html">Dencherk</a><a class="nav-link" href="index.html">На главную</a></nav>
+<!-- prerender:header:end -->
+    </header>
+    <main id="main" class="min-h-screen" tabindex="-1" data-prerendered>
+      <!-- prerender:main:start -->
+<section class="pb-24 pt-24"><div class="container-page"><article class="max-w-content"><p class="eyebrow">Правовая информация</p><h1 class="mt-4 text-4xl font-semibold sm:text-5xl">Политика конфиденциальности</h1><p class="mt-4 text-sm text-muted">Последнее обновление: 27 октября 2026</p><div class="mt-12 space-y-8"><section><h2 class="text-xl font-semibold">Какие данные собирает сайт</h2><p class="mt-3 text-base text-muted">Никаких. Сайт не использует cookies, не подключает аналитику и не собирает персональные данные посетителей.</p></section>
+<section><h2 class="text-xl font-semibold">Внешние ссылки</h2><p class="mt-3 text-base text-muted">Кнопки Google Play и RuStore ведут на сторонние сайты. На тех страницах действуют правила и политика магазинов.</p></section>
+<section><h2 class="text-xl font-semibold">Почта</h2><p class="mt-3 text-base text-muted">Если вы напишете на почту, я увижу только то, что вы отправите сами. Эти сообщения нужны, чтобы ответить на вопрос.</p></section>
+<section><h2 class="text-xl font-semibold">Изменения</h2><p class="mt-3 text-base text-muted">Политика может меняться. Актуальная версия всегда на этой странице.</p></section></div><a class="btn btn-secondary mt-12" href="index.html">На главную</a></article></div></section>
+<!-- prerender:main:end -->
     </main>
-    <div id="menu-root"></div>
-    <footer id="site-footer" class="border-t border-line"></footer>
+    <div id="menu-root"><!-- prerender:menu:start -->
+<div id="mobile-menu" class="mobile-menu sm:hidden" role="dialog" aria-modal="true" aria-label="Меню" aria-hidden="true" inert><nav class="flex h-full flex-col justify-center px-6" aria-label="Меню"><a class="mobile-link flex items-baseline gap-4 py-3 text-3xl font-semibold text-paper hover:text-paper" href="#projects" style="--d:0ms" data-menu-link data-nav-mobile="projects"><span class="text-sm font-semibold text-muted" aria-hidden="true">01</span>Проекты</a><a class="mobile-link flex items-baseline gap-4 py-3 text-3xl font-semibold text-paper hover:text-paper" href="#about" style="--d:60ms" data-menu-link data-nav-mobile="about"><span class="text-sm font-semibold text-muted" aria-hidden="true">02</span>Обо мне</a><a class="mobile-link flex items-baseline gap-4 py-3 text-3xl font-semibold text-paper hover:text-paper" href="#contacts" style="--d:120ms" data-menu-link data-nav-mobile="contacts"><span class="text-sm font-semibold text-muted" aria-hidden="true">03</span>Контакты</a></nav></div>
+<!-- prerender:menu:end --></div>
+    <footer id="site-footer" class="border-t border-line">
+      <!-- prerender:footer:start -->
+<div class="container-page flex flex-col gap-6 py-12 sm:flex-row sm:items-center sm:justify-between"><div class="flex items-center gap-3"><img class="h-8 w-8 rounded-lg" src="assets/favicon/favicon-32.png" width="32" height="32" alt="" loading="lazy" decoding="async"><div><p class="text-sm font-semibold">Dencherk</p><p class="text-xs text-muted">© 2026. Все права защищены.</p></div></div><div class="flex flex-wrap items-center gap-6 text-sm"><a class="footer-link" href="index.html">На главную</a></div></div>
+<!-- prerender:footer:end -->
+    </footer>
   </body>
 </html>
