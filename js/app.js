@@ -848,21 +848,24 @@
       }
     ];
 
-    visibleProjects('app').forEach(function (project) {
-      var links = (project.links || []).map(function (link) {
-        return link.url;
+    visibleProjects('app')
+      .concat(visibleProjects('game'))
+      .forEach(function (project) {
+        var links = (project.links || []).map(function (link) {
+          return link.url;
+        });
+        graph.push({
+          '@type': project.type === 'game' ? 'VideoGame' : 'MobileApplication',
+          name: project.title,
+          description: project.description,
+          operatingSystem: 'Android',
+          applicationCategory:
+            project.type === 'game' ? 'GameApplication' : 'EducationalApplication',
+          image: absolute(project.icon),
+          url: links[0],
+          installUrl: links
+        });
       });
-      graph.push({
-        '@type': 'MobileApplication',
-        name: project.title,
-        description: project.description,
-        operatingSystem: 'Android',
-        applicationCategory: 'EducationalApplication',
-        image: absolute(project.icon),
-        url: links[0],
-        installUrl: links
-      });
-    });
 
     var script = document.createElement('script');
     script.type = 'application/ld+json';

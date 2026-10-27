@@ -1,6 +1,6 @@
 # Dencherk — сайт разработчика
 
-Статический сайт для GitHub Pages: витрина приложений и сайтов. HTML, CSS и JavaScript без фреймворков и без серверной части.
+Статический сайт для GitHub Pages: витрина приложений, игр и сайтов. HTML, CSS и JavaScript без фреймворков и без серверной части.
 
 ## Структура
 
@@ -90,4 +90,4 @@ python -m http.server 8080
 - `assets/og/og-image.png`: простой вариант 1200×630, можно заменить.
 - Скриншот сайта `assets/projects/professor-apelsinkin/1.webp` снят с professor-apelsinkin.ru и обрезан до 16:10.
 
-Иконки приложений и экраны взяты из RuStore и с сайта центра. Шрифт Manrope (OFL) лежит локально в `assets/fonts`.
+Иконки и экраны приложений и игры взяты из RuStore, Google Play и с сайта центра. Шрифт Manrope (OFL) лежит локально в `assets/fonts`.

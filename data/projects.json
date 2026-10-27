@@ -103,6 +103,59 @@
       ]
     },
     {
+      "slug": "word-keeper",
+      "type": "game",
+      "title": "Хранитель слов",
+      "tagline": "Тихая игра в слова про совиный читальный зал",
+      "description": "Собирайте слова из букв, заполняйте кроссворд и открывайте новые уровни. 20 уровней главы «Читальный зал», бонусные слова и ежедневный уровень.",
+      "platform": "Android",
+      "icon": "assets/projects/word-keeper/icon.png",
+      "screenshots": [
+        {
+          "src": "assets/projects/word-keeper/1.webp",
+          "width": 288,
+          "height": 512,
+          "alt": "Титульный экран игры «Хранитель слов»"
+        },
+        {
+          "src": "assets/projects/word-keeper/2.webp",
+          "width": 288,
+          "height": 512,
+          "alt": "Уровень 1: сборка слова из букв"
+        },
+        {
+          "src": "assets/projects/word-keeper/3.webp",
+          "width": 288,
+          "height": 512,
+          "alt": "Глава 1: читальный зал и история"
+        },
+        {
+          "src": "assets/projects/word-keeper/4.webp",
+          "width": 288,
+          "height": 512,
+          "alt": "Уровень пройден: три звезды и награда"
+        },
+        {
+          "src": "assets/projects/word-keeper/5.webp",
+          "width": 288,
+          "height": 512,
+          "alt": "Карта главы с уровнями"
+        },
+        {
+          "src": "assets/projects/word-keeper/6.webp",
+          "width": 288,
+          "height": 512,
+          "alt": "Ежедневный бонусный уровень"
+        }
+      ],
+      "links": [
+        {
+          "label": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=ru.dencherk.hranitelslov"
+        }
+      ]
+    },
+    {
       "slug": "professor-apelsinkin",
       "type": "site",
       "title": "Профессор Апельсинкин",
